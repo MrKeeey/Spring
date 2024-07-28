@@ -10,9 +10,10 @@ public class MathTeacher implements Teacher {
 
     @Override
     public String assignHomework() {
-        List<String> homework = new ArrayList<>();
+        /*List<String> homework = new ArrayList<>();
         homework.add("2 + 2 = ?");
         homework.add("3 * 2 = ?");
-        return homework.toString();
+        return homework.toString();*/
+        return "2 + 2 = ?";
     }
 }
