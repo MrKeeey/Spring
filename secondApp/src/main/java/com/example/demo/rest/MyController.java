@@ -10,8 +10,14 @@ public class MyController {
 
     private Teacher teacher;
 
+//    @Autowired
+//    public MyController(Teacher teacher) {
+//        this.teacher = teacher;
+//    }
+
+    //зависимость через сеттер или любой метод, а не конструктор
     @Autowired
-    public MyController(Teacher teacher) {
+    public void testMethod(Teacher teacher) {
         this.teacher = teacher;
     }
 
