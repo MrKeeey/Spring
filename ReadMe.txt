@@ -13,4 +13,8 @@ package firstApp - project : start spring
 package secondApp - project : continue to learn spring
 - create project
 - scanBasePackages
--
+- @Autowired with setMethod
+- @Autowired with just Method
+- @Autowired with field
+- @Qualifiers
+
