@@ -17,4 +17,5 @@ package secondApp - project : continue to learn spring
 - @Autowired with just Method
 - @Autowired with field
 - @Qualifiers
-
+- @Primary
+-

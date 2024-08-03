@@ -16,6 +16,12 @@ public class MyController {
 //      зависимость через конструктор
 //    Если несколько классов, то нужно указать @Qualifier("historyTeacher")
 //    где historyTeacher первая буква маленькая
+//    @Autowired
+//    public MyController(@Qualifier("historyTeacher") Teacher teacher) {
+//        this.teacher = teacher;
+//    }
+
+// Аннотация @Qualifier имеет больший приоритет чем @Primary
     @Autowired
     public MyController(@Qualifier("historyTeacher") Teacher teacher) {
         this.teacher = teacher;
