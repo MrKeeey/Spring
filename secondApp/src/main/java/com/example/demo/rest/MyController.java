@@ -3,9 +3,11 @@ package com.example.demo.rest;
 import com.example.demo.common.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//@Lazy
 @RestController
 public class MyController {
 
@@ -25,6 +27,7 @@ public class MyController {
     @Autowired
     public MyController(@Qualifier("historyTeacher") Teacher teacher) {
         this.teacher = teacher;
+        System.out.println("Bean of class - " + this.getClass());
     }
 
 //      зависимость через сеттер, а не конструктор
