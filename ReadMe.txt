@@ -18,4 +18,5 @@ package secondApp - project : continue to learn spring
 - @Autowired with field
 - @Qualifiers
 - @Primary
--
+- @Lazy initialization
+- 
