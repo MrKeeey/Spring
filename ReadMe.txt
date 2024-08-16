@@ -20,4 +20,5 @@ package secondApp - project : continue to learn spring
 - @Primary
 - @Lazy initialization
 - @Scope beans
+- @PostConstruct and @PreDestroy
 -

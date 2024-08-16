@@ -14,7 +14,7 @@ public class MyController {
 //    зависимость через поле, устаревший вариант
 //    @Autowired
     private Teacher teacher;
-    private Teacher secondTeacher;
+//    private Teacher secondTeacher;
 
 //      зависимость через конструктор
 //    Если несколько классов, то нужно указать @Qualifier("historyTeacher")
@@ -26,10 +26,9 @@ public class MyController {
 
 // Аннотация @Qualifier имеет больший приоритет чем @Primary
     @Autowired
-    public MyController(@Qualifier("historyTeacher") Teacher teacher,
-                        @Qualifier("historyTeacher") Teacher secondTeacher) {
+    public MyController(@Qualifier("historyTeacher") Teacher teacher) {
         this.teacher = teacher;
-        this.secondTeacher = secondTeacher;
+//        this.secondTeacher = secondTeacher;
         System.out.println("Bean of class - " + this.getClass());
     }
 
@@ -50,10 +49,11 @@ public class MyController {
         return teacher.assignHomework();
     }
 
-    @GetMapping("/compareTeachers")
-    public String compareTeachers(){
-        return "First teacher - " + teacher + "....." +
-                "Second teacher - " + secondTeacher + "....." +
-                "Compare teachers - " + (teacher == secondTeacher);
-    }
+// Для теста @Scope
+//    @GetMapping("/compareTeachers")
+//    public String compareTeachers(){
+//        return "First teacher - " + teacher + "....." +
+//                "Second teacher - " + secondTeacher + "....." +
+//                "Compare teachers - " + (teacher == secondTeacher);
+//    }
 }
