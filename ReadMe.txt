@@ -22,4 +22,4 @@ package secondApp - project : continue to learn spring
 - @Scope beans
 - @PostConstruct and @PreDestroy
 - create Bean with config file
--
+- create new project thirdApp
