@@ -19,4 +19,5 @@ package secondApp - project : continue to learn spring
 - @Qualifiers
 - @Primary
 - @Lazy initialization
-- 
+- @Scope beans
+-
