@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Lazy
-//@Scope("prototype") тоже самое что ниже
+//@Scope("prototype") //тоже самое что ниже
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class HistoryTeacher implements Teacher {
 
@@ -23,7 +23,9 @@ public class HistoryTeacher implements Teacher {
         System.out.println("myFirstMethod");
     }
 
-// @PreDestroy Вызывается после завершения действия бина
+// @PreDestroy Вызывается после завершения действия бина / завершение приложения
+// Если класс обосначен @Scope("prototype") то @PreDestroy не вызывается
+// @PreDestroy работает только с singleton классами
     @PreDestroy
     public void myLastMethod(){
         System.out.println("myLastMethod");
