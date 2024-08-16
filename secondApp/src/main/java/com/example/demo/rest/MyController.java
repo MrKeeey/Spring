@@ -26,7 +26,7 @@ public class MyController {
 
 // Аннотация @Qualifier имеет больший приоритет чем @Primary
     @Autowired
-    public MyController(@Qualifier("historyTeacher") Teacher teacher) {
+    public MyController(@Qualifier("bestTeacher") Teacher teacher) {
         this.teacher = teacher;
 //        this.secondTeacher = secondTeacher;
         System.out.println("Bean of class - " + this.getClass());

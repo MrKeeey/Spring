@@ -21,4 +21,5 @@ package secondApp - project : continue to learn spring
 - @Lazy initialization
 - @Scope beans
 - @PostConstruct and @PreDestroy
+- create Bean with config file
 -

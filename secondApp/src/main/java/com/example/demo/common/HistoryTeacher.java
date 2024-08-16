@@ -18,18 +18,18 @@ public class HistoryTeacher implements Teacher {
     }
 
 // @PostConstruct Вызывается после создания конструктора
-    @PostConstruct
-    public void myFirstMethod() {
-        System.out.println("myFirstMethod");
-    }
+//    @PostConstruct
+//    public void myFirstMethod() {
+//        System.out.println("myFirstMethod");
+//    }
 
 // @PreDestroy Вызывается после завершения действия бина / завершение приложения
 // Если класс обосначен @Scope("prototype") то @PreDestroy не вызывается
 // @PreDestroy работает только с singleton классами
-    @PreDestroy
-    public void myLastMethod(){
-        System.out.println("myLastMethod");
-    }
+//    @PreDestroy
+//    public void myLastMethod(){
+//        System.out.println("myLastMethod");
+//    }
 
     @Override
     public String assignHomework() {
