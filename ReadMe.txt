@@ -23,3 +23,4 @@ package secondApp - project : continue to learn spring
 - @PostConstruct and @PreDestroy
 - create Bean with config file
 - create new project thirdApp
+- connect new BD

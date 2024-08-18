@@ -15,7 +15,9 @@ public class CrudApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(String[] args) {
 		return runner -> {
-			System.out.println("Meow");
+			System.out.println("Meow ;)");
+			System.out.println("No logo!");
+			System.out.println("Only warning!");
 		};
 	}
 
