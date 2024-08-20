@@ -22,6 +22,8 @@ package secondApp - project : continue to learn spring
 - @Scope beans
 - @PostConstruct and @PreDestroy
 - create Bean with config file
+
+package thirdApp - project : continue to learn spring
 - create new project thirdApp
 - connect new BD
 - create new entity class
