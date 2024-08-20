@@ -24,3 +24,5 @@ package secondApp - project : continue to learn spring
 - create Bean with config file
 - create new project thirdApp
 - connect new BD
+- create new entity class
+-
