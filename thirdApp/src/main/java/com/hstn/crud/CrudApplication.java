@@ -1,5 +1,7 @@
 package com.hstn.crud;
 
+import com.hstn.crud.dao.PupilDAO;
+import com.hstn.crud.entity.Pupil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,12 +15,18 @@ public class CrudApplication {
 	}
 
 	@Bean
-	public CommandLineRunner commandLineRunner(String[] args) {
+	public CommandLineRunner commandLineRunner(PupilDAO pupilDAO) {
 		return runner -> {
-			System.out.println("Meow ;)");
-			System.out.println("No logo!");
-			System.out.println("Only warning!");
+			createPupil(pupilDAO);
 		};
+	}
+
+	private void createPupil(PupilDAO pupilDAO) {
+		System.out.println("Creating new pupil...");
+		Pupil pupil = new Pupil("Oleg", "Petrov", "PetOl@gmail.ru");
+		System.out.println("Save pupil in DB...");
+		pupilDAO.save(pupil);
+		System.out.println("Pupil in DB: \n\t" + pupil);
 	}
 
 }

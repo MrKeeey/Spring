@@ -25,6 +25,7 @@ package secondApp - project : continue to learn spring
 
 package thirdApp - project : continue to learn spring
 - create new project thirdApp
-- connect new BD
+- connect new DB
 - create new entity class
+- add date to DB with DAO
 -
