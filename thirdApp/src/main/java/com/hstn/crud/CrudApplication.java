@@ -17,8 +17,15 @@ public class CrudApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(PupilDAO pupilDAO) {
 		return runner -> {
-			createPupil(pupilDAO);
+//			createPupil(pupilDAO);
+			readPupilInfo(pupilDAO);
 		};
+	}
+
+	private void readPupilInfo(PupilDAO pupilDAO) {
+		System.out.println("Read pupil info...");
+		Pupil pupil = pupilDAO.findById(3);
+		System.out.println("Pupil info from DB: \n\t" + pupil);
 	}
 
 	private void createPupil(PupilDAO pupilDAO) {

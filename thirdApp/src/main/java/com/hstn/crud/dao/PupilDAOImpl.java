@@ -20,4 +20,9 @@ public class PupilDAOImpl implements PupilDAO {
     public void save(Pupil pupil) {
         entityManager.persist(pupil);
     }
+
+    @Override
+    public Pupil findById(int id) {
+        return entityManager.find(Pupil.class, id);
+    }
 }

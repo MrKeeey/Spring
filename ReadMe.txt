@@ -28,4 +28,5 @@ package thirdApp - project : continue to learn spring
 - connect new DB
 - create new entity class
 - add date to DB with DAO
+- read date from DB
 -
