@@ -28,5 +28,6 @@ package thirdApp - project : continue to learn spring
 - connect new DB
 - create new entity class
 - add date to DB with DAO
-- read date from DB
+- read date from DB (Select by id / One pupil)
+- read date from DB (Select all from table / List of Pupil)
 -
