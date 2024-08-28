@@ -30,4 +30,5 @@ package thirdApp - project : continue to learn spring
 - add date to DB with DAO
 - read date from DB (Select by id / One pupil)
 - read date from DB (Select all from table / List of Pupil)
+- read date from DB with parameters
 -

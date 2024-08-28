@@ -21,8 +21,21 @@ public class CrudApplication {
 		return runner -> {
 //			createPupil(pupilDAO);
 //			readPupilInfo(pupilDAO);
-			getAllPupils(pupilDAO);
+//			getAllPupils(pupilDAO);
+			getPupilByLastName(pupilDAO);
 		};
+	}
+
+	private void getPupilByLastName(PupilDAO pupilDAO) {
+		System.out.println("List of all pupils...");
+		List<Pupil> pupils = pupilDAO.findPupilByLastName("Petrov");
+		if (pupils.size() == 0) {
+			System.out.println("There are none");
+		} else {
+			for (Pupil p : pupils) {
+				System.out.println(p);
+			}
+		}
 	}
 
 	private void getAllPupils(PupilDAO pupilDAO) {

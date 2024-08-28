@@ -43,4 +43,13 @@ public class PupilDAOImpl implements PupilDAO {
 //        with order by
 //        return entityManager.createQuery("from Pupil order by lastName desc", Pupil.class).getResultList();
     }
+
+    @Override
+    public List<Pupil> findPupilByLastName(String lastName) {
+        //1var
+        TypedQuery<Pupil> query = entityManager.createQuery("from Pupil where lastName=:searchLastName", Pupil.class);
+        query.setParameter("searchLastName", lastName);
+        List<Pupil> pupils = query.getResultList();
+        return pupils;
+    }
 }
