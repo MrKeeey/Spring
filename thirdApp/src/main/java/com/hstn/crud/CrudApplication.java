@@ -22,8 +22,23 @@ public class CrudApplication {
 //			createPupil(pupilDAO);
 //			readPupilInfo(pupilDAO);
 //			getAllPupils(pupilDAO);
-			getPupilByLastName(pupilDAO);
+//			getPupilByLastName(pupilDAO);
+			updatePupil(pupilDAO);
 		};
+	}
+
+	private void updatePupil(PupilDAO pupilDAO) {
+		System.out.println("Getting pupil from DB...");
+		Pupil pupil = pupilDAO.findById(4);
+
+		System.out.println("Pupil before Update:" + pupil);
+
+		System.out.println("Update pupil...");
+		pupil.setLastName("Antonov");
+		pupil.setEmail("DimAnt@yandex.ru");
+
+		pupilDAO.update(pupil);
+		System.out.println("Pupil after update:" + pupil);
 	}
 
 	private void getPupilByLastName(PupilDAO pupilDAO) {

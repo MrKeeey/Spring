@@ -52,4 +52,10 @@ public class PupilDAOImpl implements PupilDAO {
         List<Pupil> pupils = query.getResultList();
         return pupils;
     }
+
+    @Override
+    @Transactional
+    public void update(Pupil pupil) {
+        entityManager.merge(pupil);
+    }
 }
