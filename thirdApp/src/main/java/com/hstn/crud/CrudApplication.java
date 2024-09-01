@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.sound.midi.Soundbank;
 import java.util.List;
 
 @SpringBootApplication
@@ -23,8 +24,22 @@ public class CrudApplication {
 //			readPupilInfo(pupilDAO);
 //			getAllPupils(pupilDAO);
 //			getPupilByLastName(pupilDAO);
-			updatePupil(pupilDAO);
+//			updatePupil(pupilDAO);
+//			deletePupilById(pupilDAO);
+			deleteAll(pupilDAO);
 		};
+	}
+
+	private void deleteAll(PupilDAO pupilDAO) {
+		System.out.println("Delete all pupils...");
+		int quantityDeletedPupils = pupilDAO.deleteAllPupils();
+		System.out.println("Quantity deleted pupils: " + quantityDeletedPupils);
+	}
+
+	private void deletePupilById(PupilDAO pupilDAO) {
+		int idForDeletePupil = 2;
+		System.out.println("Delete pupil with id = " + idForDeletePupil);
+		pupilDAO.delete(idForDeletePupil);
 	}
 
 	private void updatePupil(PupilDAO pupilDAO) {

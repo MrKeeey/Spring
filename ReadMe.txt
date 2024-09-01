@@ -32,4 +32,5 @@ package thirdApp - project : continue to learn spring
 - read date from DB (Select all from table / List of Pupil)
 - read date from DB with parameters
 - update DB date
+- delete data from DB (delete by id + delete all data)
 -
