@@ -33,4 +33,7 @@ package thirdApp - project : continue to learn spring
 - read date from DB with parameters
 - update DB date
 - delete data from DB (delete by id + delete all data)
--
+- application.properties -  create new table (if table doesn't exist),
+                            update new table (if table exist),
+                            show sql query
+ -

@@ -20,13 +20,13 @@ public class CrudApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(PupilDAO pupilDAO) {
 		return runner -> {
-//			createPupil(pupilDAO);
+			createPupil(pupilDAO);
 //			readPupilInfo(pupilDAO);
 //			getAllPupils(pupilDAO);
 //			getPupilByLastName(pupilDAO);
 //			updatePupil(pupilDAO);
 //			deletePupilById(pupilDAO);
-			deleteAll(pupilDAO);
+//			deleteAll(pupilDAO);
 		};
 	}
 
@@ -84,7 +84,7 @@ public class CrudApplication {
 
 	private void createPupil(PupilDAO pupilDAO) {
 		System.out.println("Creating new pupil...");
-		Pupil pupil = new Pupil("Oleg", "Petrov", "PetOl@gmail.ru");
+		Pupil pupil = new Pupil("Tanya", "Nikolaeva", "NikTan@gmail.ru");
 		System.out.println("Save pupil in DB...");
 		pupilDAO.save(pupil);
 		System.out.println("Pupil in DB: \n\t" + pupil);
