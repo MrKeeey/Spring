@@ -1,6 +1,7 @@
 package com.hstn.crud;
 
 import com.hstn.crud.dao.PupilDAO;
+import com.hstn.crud.dao.PupilDAOImpl;
 import com.hstn.crud.entity.Pupil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,8 @@ public class CrudApplication {
 
 	@Bean
 	public CommandLineRunner commandLineRunner(PupilDAO pupilDAO) {
+//		2nd variant: use class not interface
+//	public CommandLineRunner commandLineRunner(PupilDAOImpl pupilDAOImpl) {
 		return runner -> {
 			createPupil(pupilDAO);
 //			readPupilInfo(pupilDAO);
@@ -84,7 +87,7 @@ public class CrudApplication {
 
 	private void createPupil(PupilDAO pupilDAO) {
 		System.out.println("Creating new pupil...");
-		Pupil pupil = new Pupil("Tanya", "Nikolaeva", "NikTan@gmail.ru");
+		Pupil pupil = new Pupil("Test_1", "Test_2", "Test_3@gmail.ru");
 		System.out.println("Save pupil in DB...");
 		pupilDAO.save(pupil);
 		System.out.println("Pupil in DB: \n\t" + pupil);

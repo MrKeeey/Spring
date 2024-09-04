@@ -36,4 +36,5 @@ package thirdApp - project : continue to learn spring
 - application.properties -  create new table (if table doesn't exist),
                             update new table (if table exist),
                             show sql query
- -
+- test use class for create query (not interface)
+-
