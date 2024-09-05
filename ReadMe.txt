@@ -37,4 +37,7 @@ package thirdApp - project : continue to learn spring
                             update new table (if table exist),
                             show sql query
 - test use class for create query (not interface)
+
+package fourthApp - project : continue to learn spring
+- create new project fourthApp
 -
