@@ -3,6 +3,7 @@ package com.meow.rest.my_controller;
 import com.meow.rest.entity.Pupil;
 import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,5 +34,11 @@ public class PupilRestController {
         return pupils;
     }
 
+    @GetMapping("/pupils/{pupilIndex}")
+    //public Pupil getPupilByIndexOfArrayList(@PathVariable int pupilIndex) {
+    //second variant
+    public Pupil getPupilByIndexOfArrayList(@PathVariable(name = "pupilIndex") int id) {
+        return pupils.get(id);
+    }
 
 }
