@@ -44,4 +44,5 @@ package fourthApp - project : continue to learn spring
 - refactoring code (new method for create)
 - @PathVariable
 - create new class for check RuntimeException
+- create new method for error handling
 -

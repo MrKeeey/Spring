@@ -2,10 +2,9 @@ package com.meow.rest.my_controller;
 
 import com.meow.rest.entity.Pupil;
 import jakarta.annotation.PostConstruct;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,10 +34,24 @@ public class PupilRestController {
     }
 
     @GetMapping("/pupils/{pupilIndex}")
-    //public Pupil getPupilByIndexOfArrayList(@PathVariable int pupilIndex) {
+    public Pupil getPupilByIndexOfArrayList(@PathVariable int pupilIndex) {
     //second variant
-    public Pupil getPupilByIndexOfArrayList(@PathVariable(name = "pupilIndex") int id) {
-        return pupils.get(id);
+//    public Pupil getPupilByIndexOfArrayList(@PathVariable(name = "pupilIndex") int id) {
+        if (pupilIndex < 0 || pupilIndex >= pupils.size()) {
+            throw new PupilNotFoundException("Pupil with id: " + pupilIndex + ", not found");
+        }
+
+        return pupils.get(pupilIndex);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<PupilErrorResponse> handlerException (PupilNotFoundException exception) {
+        PupilErrorResponse error = new PupilErrorResponse();
+        error.setStatus(HttpStatus.NOT_FOUND.value());
+        error.setMessage(exception.getMessage());
+        error.setTimestamp(System.currentTimeMillis());
+
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
 }
