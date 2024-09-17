@@ -43,4 +43,5 @@ package fourthApp - project : continue to learn spring
 - create new class + learning return json object
 - refactoring code (new method for create)
 - @PathVariable
+- create new class for check RuntimeException
 -
