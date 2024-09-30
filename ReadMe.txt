@@ -46,4 +46,5 @@ package fourthApp - project : continue to learn spring
 - create new class for check RuntimeException
 - create new method for error handling
 - create new method for error with text enter
--
+- create new class for all exception + @ControllerAdvice
+

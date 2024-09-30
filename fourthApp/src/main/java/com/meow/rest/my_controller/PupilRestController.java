@@ -46,25 +46,4 @@ public class PupilRestController {
         return pupils.get(pupilIndex);
     }
 
-    @ExceptionHandler
-    public ResponseEntity<PupilErrorResponse> handlerException (PupilNotFoundException exception) {
-        PupilErrorResponse error = new PupilErrorResponse();
-        error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setMessage(exception.getMessage());
-        error.setTimestamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-//    public ResponseEntity<PupilErrorResponse> handlerException (Exception exception) {
-    public ResponseEntity<PupilErrorResponse> handlerException (MethodArgumentTypeMismatchException exception) {
-        PupilErrorResponse error = new PupilErrorResponse();
-        error.setStatus(HttpStatus.BAD_REQUEST.value());
-        error.setMessage("User enter invalid data. You must enter only INTEGER value.");
-        error.setTimestamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
-    }
-
 }
