@@ -45,4 +45,5 @@ package fourthApp - project : continue to learn spring
 - @PathVariable
 - create new class for check RuntimeException
 - create new method for error handling
+- create new method for error with text enter
 -
