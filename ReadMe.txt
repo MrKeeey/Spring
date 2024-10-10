@@ -48,3 +48,8 @@ package fourthApp - project : continue to learn spring
 - create new method for error with text enter
 - create new class for all exception + @ControllerAdvice
 
+package fifthApp - project : continue to learn spring + mysql
+- create new project fifthApp
+- create new table employee (use old DB)
+- connect DB with fifthApp + create class Employee
+-
