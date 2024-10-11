@@ -52,4 +52,4 @@ package fifthApp - project : continue to learn spring + mysql
 - create new project fifthApp
 - create new table employee (use old DB)
 - connect DB with fifthApp + create class Employee
--
+- create new interface EmployeeDAO + class EmployeeDAOImpl + method findAll
