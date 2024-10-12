@@ -55,4 +55,5 @@ package fifthApp - project : continue to learn spring + mysql
 - create new interface EmployeeDAO + class EmployeeDAOImpl + method findAll
 - add EmployeeRestController
 - add EmployeeService
+- add new methods: findById, save, delete
 -
