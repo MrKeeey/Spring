@@ -56,4 +56,5 @@ package fifthApp - project : continue to learn spring + mysql
 - add EmployeeRestController
 - add EmployeeService
 - add new methods: findById, save, delete
+- add new annotations: PostMapping, RequestBody
 -
