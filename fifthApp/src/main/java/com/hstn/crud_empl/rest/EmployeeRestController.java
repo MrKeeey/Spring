@@ -1,6 +1,5 @@
 package com.hstn.crud_empl.rest;
 
-import com.hstn.crud_empl.dao.EmployeeDAO;
 import com.hstn.crud_empl.entity.Employee;
 import com.hstn.crud_empl.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class EmployeeRestController {
 
     @GetMapping("/employees/{employeeId}")
     public Employee getEmployee(@PathVariable int employeeId) {
-        Employee employee = employeeService.findEmployeeById(employeeId);
+        Employee employee = employeeService.findById(employeeId);
 
         if (employee == null) {
             throw new RuntimeException("Employee with id: " + employeeId + " not found.");
@@ -47,7 +46,7 @@ public class EmployeeRestController {
     @PutMapping("/employees/{employeeId}")
     public Employee updateEmployee(@PathVariable int employeeId) {
         //my try @PathVariable
-        Employee employee = employeeService.findEmployeeById(employeeId);
+        Employee employee = employeeService.findById(employeeId);
         employee.setLastName("MeowMeow");
         //end my try
 
@@ -57,7 +56,7 @@ public class EmployeeRestController {
 
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId) {
-        Employee employee = employeeService.findEmployeeById(employeeId);
+        Employee employee = employeeService.findById(employeeId);
         if (employee == null) {
             throw new RuntimeException("Employee with id: " + employeeId + " not found.");
         } else {

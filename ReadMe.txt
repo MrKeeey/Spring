@@ -59,4 +59,4 @@ package fifthApp - project : continue to learn spring + mysql
 - add new annotations: PostMapping, RequestBody
 - add new annotation: PutMapping. Update table
 - add new annotation: DeleteMapping. Delete from table. And my try rewrite @PutMapping method.
--
+- delete some code: EmployeeDAO interface and  EmployeeDAOImpl class + rename some methods (findById)
