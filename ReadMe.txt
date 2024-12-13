@@ -62,4 +62,5 @@ package fifthApp - project : continue to learn spring + mysql
 - delete some code: EmployeeDAO interface and  EmployeeDAOImpl class + rename some methods (findById)
 - add new branch for Security REST API
 - create new users with roles (MySecurityConfiguration)
+- add access for new roles
 -
