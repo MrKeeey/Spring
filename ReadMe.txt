@@ -63,4 +63,5 @@ package fifthApp - project : continue to learn spring + mysql
 - add new branch for Security REST API
 - create new users with roles (MySecurityConfiguration)
 - add access for new roles
+- create new tables (users, authorities) in BD and use UserDetailsManager
 -

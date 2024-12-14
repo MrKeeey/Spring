@@ -1,39 +1,25 @@
 package com.hstn.crud_empl.security;
 
+//import org.springframework.security.core.userdetails.User;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
+import javax.sql.DataSource;
 
 @Configuration
 public class MySecurityConfiguration {
 
     @Bean
-    public InMemoryUserDetailsManager userDetailsManager() {
-        UserDetails user1Ivan = User.builder()
-                .username("ivan")
-                .password("{noop}test123")
-                .roles("EMPLOYEE")
-                .build();
-
-        UserDetails user2Oleg = User.builder()
-                .username("oleg")
-                .password("{noop}test123")
-                .roles("EMPLOYEE", "MANAGER")
-                .build();
-
-        UserDetails user3Inna = User.builder()
-                .username("inna")
-                .password("{noop}test123")
-                .roles("EMPLOYEE", "MANAGER", "ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(user1Ivan, user2Oleg, user3Inna);
+    public UserDetailsManager userDetailsManager(DataSource dataSource) {
+        return new JdbcUserDetailsManager(dataSource);
     }
 
     @Bean
@@ -51,4 +37,28 @@ public class MySecurityConfiguration {
 
         return http.build();
     }
+
+    //    @Bean
+//    public InMemoryUserDetailsManager userDetailsManager() {
+//        UserDetails user1Ivan = User.builder()
+//                .username("ivan")
+//                .password("{noop}test123")
+//                .roles("EMPLOYEE")
+//                .build();
+//
+//        UserDetails user2Oleg = User.builder()
+//                .username("oleg")
+//                .password("{noop}test123")
+//                .roles("EMPLOYEE", "MANAGER")
+//                .build();
+//
+//        UserDetails user3Inna = User.builder()
+//                .username("inna")
+//                .password("{noop}test123")
+//                .roles("EMPLOYEE", "MANAGER", "ADMIN")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(user1Ivan, user2Oleg, user3Inna);
+//    }
+
 }
