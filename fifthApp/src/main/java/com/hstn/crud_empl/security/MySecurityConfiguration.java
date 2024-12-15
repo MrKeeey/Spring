@@ -19,7 +19,10 @@ public class MySecurityConfiguration {
 
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
+        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+        jdbcUserDetailsManager.setUsersByUsernameQuery("select user_id, password, active from members where user_id=?");
+        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery("select user_id, role from roles where user_id=?");
+        return jdbcUserDetailsManager;
     }
 
     @Bean
@@ -38,7 +41,7 @@ public class MySecurityConfiguration {
         return http.build();
     }
 
-    //    @Bean
+//        @Bean
 //    public InMemoryUserDetailsManager userDetailsManager() {
 //        UserDetails user1Ivan = User.builder()
 //                .username("ivan")
@@ -48,7 +51,7 @@ public class MySecurityConfiguration {
 //
 //        UserDetails user2Oleg = User.builder()
 //                .username("oleg")
-//                .password("{noop}test123")
+//                .password("{bcrypt}$2a$12$3K/f5zkiSmHKCX9KySpghuBTD.vVepxPjhTnerJKh8tvdvWqVKeeG")
 //                .roles("EMPLOYEE", "MANAGER")
 //                .build();
 //

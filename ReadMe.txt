@@ -65,4 +65,6 @@ package fifthApp - project : continue to learn spring + mysql
 - add access for new roles
 - create new tables (users, authorities) in BD and use UserDetailsManager
 - change noop password to bcrypt password
+- change default tables to tables: members and roles
+- fix UserDetailsManager for new tables
 -
