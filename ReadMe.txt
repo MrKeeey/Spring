@@ -71,4 +71,5 @@ package fifthApp - project : continue to learn spring + mysql
 package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - create new project sixthApp with Thymeleaf
 - add controller and helloWorld.html
+- add css: mystyle.css
 -
