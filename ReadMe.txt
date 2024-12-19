@@ -73,5 +73,6 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add controller and helloWorld.html
 - add css: mystyle.css
 - add @RequestMapping and use form in html
-- add method correctName for fix name
+- add method correctName (use HttpServletRequest) for fix name
+- add method correctName3 (use @RequestParam) for fix name
 -
