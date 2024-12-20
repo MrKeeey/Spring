@@ -75,4 +75,5 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add @RequestMapping and use form in html
 - add method correctName (use HttpServletRequest) for fix name
 - add method correctName3 (use @RequestParam) for fix name
+- add new class: Pupil
 -
