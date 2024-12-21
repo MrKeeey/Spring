@@ -76,4 +76,4 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add method correctName (use HttpServletRequest) for fix name
 - add method correctName3 (use @RequestParam) for fix name
 - add new class: Pupil
--
+- change pupil-form.html + create method processPupilForm
