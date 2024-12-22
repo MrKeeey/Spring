@@ -4,6 +4,7 @@ public class Pupil {
     private String firstName;
     private String lastName;
     private String sex;
+    private String city;
 
     public Pupil() {
     }
@@ -32,11 +33,21 @@ public class Pupil {
         this.sex = sex;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
         return "Pupil{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", sex='" + sex + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 }

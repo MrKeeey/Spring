@@ -6,21 +6,31 @@
 </head>
 <body>
 
-    <h2>Pupil form</h2>
+<h2>Pupil form</h2>
+<br><br>
+
+<form th:action="@{/processPupilForm}" th:object="${pupil}" method="post">
+    First name: <input type="text" th:field="${pupil.firstName}"/>
     <br><br>
 
-    <form th:action="@{/processPupilForm}" th:object="${pupil}" method="post">
-        First name: <input type="text" th:field="${pupil.firstName}"/>
-        <br><br>
-        Last name: <input type="text" th:field="*{lastName}"/>
-        <br><br>
-        <select th:field="*{sex}">
-            <option th:value="Boy">Boy</option>
-            <option th:value="Girl">Girl</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+    Last name: <input type="text" th:field="*{lastName}"/>
+    <br><br>
+
+    Sex:
+    <select th:field="*{sex}">
+        <option th:value="Boy">Boy</option>
+        <option th:value="Girl">Girl</option>
+    </select>
+    <br><br>
+
+    City:
+    <select th:field="*{city}">
+        <option th:each="tempCity : ${cities}" th:value ="${tempCity}" th:text="${tempCity}"></option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
