@@ -78,4 +78,5 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add new class: Pupil
 - change pupil-form.html + create method processPupilForm
 - add pupil-confirmation.html
+- add select field
 -
