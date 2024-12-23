@@ -78,7 +78,8 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add new class: Pupil
 - change pupil-form.html + create method processPupilForm
 - add pupil-confirmation.html
-- add select field
-- add 2nd variant: how to create select field with application.properties
+- add drop down list
+- add 2nd variant: how to create drop down list with application.properties
 - add radio button
+- add 2nd variant: how to create radio button with application.properties
 -
