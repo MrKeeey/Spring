@@ -29,6 +29,12 @@
     </select>
     <br><br>
 
+    Favorite drink:
+    <input type="radio" th:field="*{favoriteDrink}" th:value ="Tea" th:text="Tea">
+    <input type="radio" th:field="*{favoriteDrink}" th:value ="Coffee" th:text="Coffee">
+    <input type="radio" th:field="*{favoriteDrink}" th:value ="Water" th:text="Water">
+
+    <br><br>
     <input type="submit" value="Submit">
 </form>
 

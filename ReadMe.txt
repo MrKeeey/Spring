@@ -80,4 +80,5 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add pupil-confirmation.html
 - add select field
 - add 2nd variant: how to create select field with application.properties
+- add radio button
 -

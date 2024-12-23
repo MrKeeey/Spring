@@ -5,6 +5,7 @@ public class Pupil {
     private String lastName;
     private String sex;
     private String city;
+    private String favoriteDrink;
 
     public Pupil() {
     }
@@ -41,6 +42,14 @@ public class Pupil {
         this.city = city;
     }
 
+    public String getFavoriteDrink() {
+        return favoriteDrink;
+    }
+
+    public void setFavoriteDrink(String favoriteDrink) {
+        this.favoriteDrink = favoriteDrink;
+    }
+
     @Override
     public String toString() {
         return "Pupil{" +
@@ -48,6 +57,7 @@ public class Pupil {
                 ", lastName='" + lastName + '\'' +
                 ", sex='" + sex + '\'' +
                 ", city='" + city + '\'' +
+                ", favoriteDrink='" + favoriteDrink + '\'' +
                 '}';
     }
 }
