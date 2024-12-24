@@ -82,4 +82,5 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add 2nd variant: how to create drop down list with application.properties
 - add radio button
 - add 2nd variant: how to create radio button with application.properties
+- add checkbox
 -

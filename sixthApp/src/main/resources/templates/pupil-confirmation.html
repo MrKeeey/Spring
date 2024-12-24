@@ -14,6 +14,21 @@
     <br>
     Pupil from <span th:text="${pupil.city}"></span>.
     <br>
-    Pupil favorite drink is a <span th:text="${pupil.favoriteDrink}"></span>.
+    Pupil favorite drink: <span th:text="${pupil.favoriteDrink}"></span>.
+    <br>
+    Pupil favorite cars:
+<!--    just list-->
+<!--    <span th:text="${pupil.favoriteCars}"></span>.-->
+
+<!--    marked list-->
+<!--    <ul>-->
+<!--        <li th:each="oneCar : ${pupil.favoriteCars}" th:text="${oneCar}"></li>-->
+<!--    </ul>-->
+<!--    nums list-->
+    <ol>
+        <li th:each="oneCar : ${pupil.favoriteCars}" th:text="${oneCar}"></li>
+    </ol>
+    <br>
+
 </body>
 </html>
