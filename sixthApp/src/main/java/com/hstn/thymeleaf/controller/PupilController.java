@@ -19,6 +19,9 @@ public class PupilController {
     @Value("${drinks}")
     private List<String> drinks;
 
+    @Value("${cars}")
+    private List<String> cars;
+
     @GetMapping("/showPupilForm")
     public String showForm(Model model) {
 //        Pupil pupil = new Pupil();
@@ -26,6 +29,7 @@ public class PupilController {
         model.addAttribute("pupil", new Pupil());
         model.addAttribute("cities", cities);
         model.addAttribute("drinks", drinks);
+        model.addAttribute("cars", cars);
         return "pupil-form";
     }
 
