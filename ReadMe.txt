@@ -84,4 +84,7 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 - add 2nd variant: how to create radio button with application.properties
 - add checkbox
 - add 2nd variant: how to create checkbox with application.properties
+
+package 7thApp - project : continue to learn spring MVC. Validation
+- create new project 7thApp with Validation
 -
