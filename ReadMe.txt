@@ -87,4 +87,5 @@ package sixthApp - project : continue to learn spring MVC. Thymeleaf
 
 package 7thApp - project : continue to learn spring MVC. Validation
 - create new project 7thApp with Validation
+- add new class: Client, with @NotNull + @Size
 -
