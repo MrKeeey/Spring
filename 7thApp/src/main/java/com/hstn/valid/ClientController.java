@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ClientController {
 
-    @GetMapping("/show")
+    @GetMapping("/client")
     public String showClientForm(Model model) {
         model.addAttribute("client", new Client());
         return "client-form";

@@ -6,8 +6,8 @@ import jakarta.validation.constraints.Size;
 public class Client {
     private String firstName;
 
-    @NotNull(message = "Enter last name.")
-    @Size(min = 2, max = 100, message = "Enter correct last name.")
+    @NotNull()
+    @Size(min = 2, max = 100, message = "Enter correct last name. Min 2 symbols, max 100 symbols.")
     private String lastName;
 
     public String getFirstName() {

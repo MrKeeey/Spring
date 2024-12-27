@@ -21,7 +21,8 @@
         Last name*:<input type="text" th:field="*{lastName}">
         <span th:if="${#fields.hasErrors('lastName')}"
               th:errors="${client.lastName}"
-              class="error"></span>
+              class="error">
+        </span>
         <br><br>
 
         <input type="submit">
