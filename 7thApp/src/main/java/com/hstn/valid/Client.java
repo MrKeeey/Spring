@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 public class Client {
     private String firstName;
 
-    @NotNull()
+    @NotNull(message = "The field must not be empty.")
     @Size(min = 2, max = 100, message = "Enter correct last name. Min 2 symbols, max 100 symbols.")
     private String lastName;
 

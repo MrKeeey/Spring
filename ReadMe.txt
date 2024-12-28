@@ -90,4 +90,5 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add new class: Client, with @NotNull + @Size
 - add template client-form
 - add validation (new template client-configuration, mew method processForm)
+- add new method with @InitBinder
 -
