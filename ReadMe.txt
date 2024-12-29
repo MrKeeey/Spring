@@ -92,4 +92,5 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add validation (new template client-configuration, mew method processForm)
 - add new method with @InitBinder
 - add new field: Age, with @Min and @Max annotation
+- add new field: zipCode, with @Pattern annotation
 -

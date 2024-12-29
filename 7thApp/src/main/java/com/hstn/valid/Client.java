@@ -1,9 +1,6 @@
 package com.hstn.valid;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 public class Client {
     private String firstName;
@@ -15,6 +12,11 @@ public class Client {
     @Min(value = 18, message = "You must be older then 17.")
     @Max(value = 125, message = "Are you really still alive? You must be younger then 126.")
     private int age;
+
+    @NotNull
+//    @Pattern(regexp = "^[A-Za-z0-9]{5}", message = "Enter valid zip code. Only numbers, 5 digit.")
+    @Pattern(regexp = "^[0-9]{5}", message = "Enter valid zip code. Only numbers, 5 digit.")
+    private String zipCode;
 
     public String getFirstName() {
         return firstName;
@@ -38,5 +40,13 @@ public class Client {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 }

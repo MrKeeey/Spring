@@ -32,6 +32,13 @@
         </span>
         <br><br>
 
+        Zip code:<input type="text" th:field="*{zipCode}">
+        <span th:if="${#fields.hasErrors('zipCode')}"
+              th:errors="${client.zipCode}"
+              class="error">
+        </span>
+        <br><br>
+
         <input type="submit">
     </form>
 
