@@ -9,9 +9,10 @@ public class Client {
     @Size(min = 2, max = 100, message = "Enter correct last name. Min 2 symbols, max 100 symbols.")
     private String lastName;
 
+    @NotNull(message = "Enter your age.")
     @Min(value = 18, message = "You must be older then 17.")
     @Max(value = 125, message = "Are you really still alive? You must be younger then 126.")
-    private int age;
+    private Integer age;
 
     @NotNull
 //    @Pattern(regexp = "^[A-Za-z0-9]{5}", message = "Enter valid zip code. Only numbers, 5 digit.")
@@ -34,11 +35,11 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

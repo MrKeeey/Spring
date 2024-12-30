@@ -28,6 +28,9 @@ public class ClientController {
 
     @PostMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("client") Client client, BindingResult bindingResult) {
+        System.out.println("---------------------");
+        System.out.println(bindingResult);
+        System.out.println("---------------------");
         if( bindingResult.hasErrors()) {
             return "client-form";
         } else {
