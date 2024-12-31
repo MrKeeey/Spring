@@ -94,4 +94,5 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add new field: Age, with @Min and @Max annotation
 - add new field: zipCode, with @Pattern annotation
 - add new file: messages.properties for errors messages
+- add new validation CarNumber
 -
