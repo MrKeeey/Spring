@@ -39,6 +39,13 @@
         </span>
         <br><br>
 
+        Car number:<input type="text" th:field="*{carNumber}">
+        <span th:if="${#fields.hasErrors('carNumber')}"
+              th:errors="${client.carNumber}"
+              class="error">
+        </span>
+        <br><br>
+
         <input type="submit">
     </form>
 

@@ -1,5 +1,6 @@
 package com.hstn.valid;
 
+import com.hstn.valid.validation.CarNumber;
 import jakarta.validation.constraints.*;
 
 public class Client {
@@ -18,6 +19,9 @@ public class Client {
 //    @Pattern(regexp = "^[A-Za-z0-9]{5}", message = "Enter valid zip code. Only numbers, 5 digit.")
     @Pattern(regexp = "^[0-9]{5}", message = "Enter valid zip code. Only numbers, 5 digit.")
     private String zipCode;
+
+    @CarNumber(value = "ENG", message = "Number must be from England")
+    private String carNumber;
 
     public String getFirstName() {
         return firstName;
@@ -49,5 +53,13 @@ public class Client {
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
 }
