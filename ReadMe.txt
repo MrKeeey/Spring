@@ -99,3 +99,6 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add new filed carNumber for test our custom validation
 - fix upperCase error if field is empty
 
+package 7thApp - project : continue to learn spring (back to fifthApp - project with Employee)
+- create new project from fifthApp project
+-
