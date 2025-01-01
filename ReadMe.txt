@@ -97,4 +97,5 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add new custom validation CarNumber
 - add new class CarNumberValidator for custom validation
 - add new filed carNumber for test our custom validation
--
+- fix upperCase error if field is empty
+
