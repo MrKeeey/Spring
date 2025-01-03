@@ -102,4 +102,5 @@ package 7thApp - project : continue to learn spring MVC. Validation
 package 7thApp - project : continue to learn spring (back to fifthApp - project with Employee)
 - create new project from fifthApp project
 - create new controller + del old controller
+- add dependency Thymeleaf + template list-employees
 -
