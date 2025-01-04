@@ -103,4 +103,5 @@ package 7thApp - project : continue to learn spring (back to fifthApp - project 
 - create new project from fifthApp project
 - create new controller + del old controller
 - add dependency Thymeleaf + template list-employees
+- add Bootstrap for table
 -
