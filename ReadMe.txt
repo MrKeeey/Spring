@@ -110,4 +110,5 @@ package 7thApp - project : continue to learn spring (back to fifthApp - project 
 - add method (POST) for save Employee + "Back" button
 - add sort data in the table + sort with js
 - add filed + Update button for update data
-- 
+- add new method for update Employee
+-

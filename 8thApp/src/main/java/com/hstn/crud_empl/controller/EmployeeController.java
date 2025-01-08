@@ -5,10 +5,7 @@ import com.hstn.crud_empl.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,6 +29,13 @@ public class EmployeeController {
     @GetMapping("/addNewEmployee")
     public String addNewEmployee(Model model) {
         Employee employee = new Employee();
+        model.addAttribute("employee", employee);
+        return "new-employee-form";
+    }
+
+    @GetMapping("/updateEmployee")
+    public String formForUpdate(@RequestParam("employeeId") int employeeId, Model model) {
+        Employee employee = employeeService.findById(employeeId);
         model.addAttribute("employee", employee);
         return "new-employee-form";
     }
