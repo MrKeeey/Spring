@@ -46,15 +46,21 @@
             <th id="lastname-header" class="sortable">Last name</th>
             <th id="firstname-header" class="sortable">First name</th>
             <th id="email-header" class="sortable">Email</th>
+            <th id="update-header">Update</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr th:each="oneEmployee :${employees}">
+        <tr th:each="oneEmployee : ${employees}">
             <td th:text="${oneEmployee.id}"></td>
             <td th:text="${oneEmployee.lastName}"></td>
             <td th:text="${oneEmployee.firstName}"></td>
             <td th:text="${oneEmployee.email}"></td>
+            <td>
+                <a th:href="@{/employees/updateEmployee(employeeId=${oneEmployee.id})}" class="btn btn-primary btn-sm">
+                    Update
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>
