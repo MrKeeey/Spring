@@ -111,4 +111,5 @@ package 7thApp - project : continue to learn spring (back to fifthApp - project 
 - add sort data in the table + sort with js
 - add filed + Update button for update data
 - add new method for update Employee
+- add new method for delete Employee (field + button)
 -
