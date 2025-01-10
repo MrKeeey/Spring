@@ -99,7 +99,7 @@ package 7thApp - project : continue to learn spring MVC. Validation
 - add new filed carNumber for test our custom validation
 - fix upperCase error if field is empty
 
-package 7thApp - project : continue to learn spring (back to fifthApp - project with Employee)
+package 8thApp - project : continue to learn spring (back to fifthApp - project with Employee)
 - create new project from fifthApp project
 - create new controller + del old controller
 - add dependency Thymeleaf + template list-employees
@@ -112,4 +112,7 @@ package 7thApp - project : continue to learn spring (back to fifthApp - project 
 - add filed + Update button for update data
 - add new method for update Employee
 - add new method for delete Employee (field + button)
+
+package 9thApp - project : continue to learn spring 'Security'
+- create new project 9thApp with Spring Security
 -
