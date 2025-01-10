@@ -115,4 +115,5 @@ package 8thApp - project : continue to learn spring (back to fifthApp - project 
 
 package 9thApp - project : continue to learn spring 'Security'
 - create new project 9thApp with Spring Security
+- add controller and home-page.html
 -
