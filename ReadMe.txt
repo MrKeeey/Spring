@@ -118,3 +118,5 @@ package 9thApp - project : continue to learn spring 'Security'
 - add controller and home-page.html
 - add new users + passwords
 - create new login page (new controller + new html page)
+- add check for login errors
+-

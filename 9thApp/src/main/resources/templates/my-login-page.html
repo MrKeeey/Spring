@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login page</title>
@@ -7,6 +7,10 @@
 <body>
 <h3>Enter your data</h3>
 <form action="#" th:action="@{authenticateUser}" method="post">
+    <div th:if="${param.error}">
+        <span style="color: red">Please, enter correct data!</span>
+    </div>
+
     <p>
         User name: <input type="text" name="username">
     </p>
