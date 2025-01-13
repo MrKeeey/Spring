@@ -11,6 +11,10 @@
         <span style="color: red">Please, enter correct data!</span>
     </div>
 
+    <div th:if="${param.logout}">
+        <span style="color: green">You are logout from system!</span>
+    </div>
+
     <p>
         User name: <input type="text" name="username">
     </p>
