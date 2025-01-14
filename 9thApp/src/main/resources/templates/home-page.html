@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
@@ -7,7 +9,11 @@
 <body>
 
 <h2>Meow!</h2>
-<br>
+<p>
+    User: <span sec:authentication="principal.username"></span>
+    <br>
+    Roles: <span sec:authentication="principal.authorities"></span>
+</p>
 
 <hr>
 <div>
