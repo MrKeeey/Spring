@@ -10,4 +10,9 @@ public class MyLoginController {
     public String myLoginPage() {
         return "my-login-page";
     }
+
+    @GetMapping("/managers")
+    public String myManagersPage() {
+        return "managers";
+    }
 }

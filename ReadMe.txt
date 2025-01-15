@@ -121,4 +121,5 @@ package 9thApp - project : continue to learn spring 'Security'
 - add check for login errors
 - add logout button
 - add info about username on login page
+- add managers page
 -

@@ -8,13 +8,15 @@
 </head>
 <body>
 
-<h2>Meow!</h2>
+<h2>Common info</h2>
 <p>
     User: <span sec:authentication="principal.username"></span>
     <br>
     Roles: <span sec:authentication="principal.authorities"></span>
 </p>
-
+<p>
+    <a th:href="@{managers}">Manager info page</a>
+</p>
 <hr>
 <div>
     <span>You so cute meow!</span> <br>
