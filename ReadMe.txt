@@ -115,11 +115,12 @@ package 8thApp - project : continue to learn spring (back to fifthApp - project 
 
 package 9thApp - project : continue to learn spring 'Security'
 - create new project 9thApp with Spring Security
-- add controller and home-page.html
-- add new users + passwords
+- added controller and home-page.html
+- added new users + passwords
 - create new login page (new controller + new html page)
-- add check for login errors
-- add logout button
-- add info about username on login page
-- add managers page
+- added check for login errors
+- added logout button
+- added info about username on login page
+- added managers page
+- added access for managers
 -
