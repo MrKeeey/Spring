@@ -15,4 +15,9 @@ public class MyLoginController {
     public String myManagersPage() {
         return "managers";
     }
+
+    @GetMapping("/admins")
+    public String myAdminsPage() {
+        return "admins";
+    }
 }

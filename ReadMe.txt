@@ -123,4 +123,5 @@ package 9thApp - project : continue to learn spring 'Security'
 - added info about username on login page
 - added managers page
 - added access for managers
+- added admins page
 -
