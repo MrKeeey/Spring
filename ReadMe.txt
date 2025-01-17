@@ -125,4 +125,5 @@ package 9thApp - project : continue to learn spring 'Security'
 - added access for managers
 - added admins page
 - added access denied page
+- added hiding links
 -

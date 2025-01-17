@@ -14,10 +14,16 @@
     <br>
     Roles: <span sec:authentication="principal.authorities"></span>
 </p>
-<p>
-    <a th:href="@{managers}" class="btn btn-primary btn-sm">Manager info page</a>
-    <a th:href="@{admins}">Admin info page</a>
-</p>
+<div sec:authorize="hasRole('MANAGER')">
+    <p>
+        <a th:href="@{managers}">Manager info page</a>
+    </p>
+</div>
+<div sec:authorize="hasRole('ADMIN')">
+    <p>
+        <a th:href="@{admins}">Admin info page</a>
+    </p>
+</div>
 <hr>
 <div>
     <span>You so cute meow!</span> <br>

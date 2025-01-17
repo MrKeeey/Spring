@@ -40,7 +40,6 @@ public class MySecurityConfiguration {
                 .exceptionHandling(configurer -> configurer.accessDeniedPage("/access-denied-page")
                 );
 
-
         return http.build();
     }
 }
