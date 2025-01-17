@@ -20,4 +20,9 @@ public class MyLoginController {
     public String myAdminsPage() {
         return "admins";
     }
+
+    @GetMapping("/access-denied-page")
+    public String myAccessDeniedPage() {
+        return "access-denied-page";
+    }
 }

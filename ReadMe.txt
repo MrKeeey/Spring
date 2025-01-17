@@ -124,4 +124,5 @@ package 9thApp - project : continue to learn spring 'Security'
 - added managers page
 - added access for managers
 - added admins page
+- added access denied page
 -
