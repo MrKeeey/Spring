@@ -6,23 +6,33 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
+import javax.sql.DataSource;
 
 @Configuration
 public class MySecurityConfiguration {
 
+    //use DB
+//    @Bean
+//    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
+//        UserDetails anna = User.builder()
+//                .username("Anna").password("{noop}anna123").roles("USER")
+//                .build();
+//        UserDetails boris = User.builder()
+//                .username("Boris").password("{noop}boris123").roles("USER", "MANAGER")
+//                .build();
+//        UserDetails victor = User.builder()
+//                .username("Victor").password("{noop}victor123").roles("USER", "MANAGER", "ADMIN")
+//                .build();
+//        return new InMemoryUserDetailsManager(anna, boris, victor);
+//    }
+
     @Bean
-    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-        UserDetails anna = User.builder()
-                .username("Anna").password("{noop}anna123").roles("USER")
-                .build();
-        UserDetails boris = User.builder()
-                .username("Boris").password("{noop}boris123").roles("USER", "MANAGER")
-                .build();
-        UserDetails victor = User.builder()
-                .username("Victor").password("{noop}victor123").roles("USER", "MANAGER", "ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(anna, boris, victor);
+    public UserDetailsManager userDetailsManager(DataSource dataSource) {
+        return new JdbcUserDetailsManager(dataSource);
     }
 
     @Bean
