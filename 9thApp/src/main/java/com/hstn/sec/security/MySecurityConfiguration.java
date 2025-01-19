@@ -32,7 +32,10 @@ public class MySecurityConfiguration {
 
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
+        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+        jdbcUserDetailsManager.setUsersByUsernameQuery("select client_name, pass, enabled from client where client_name=?");
+        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery("select client_name, role from roles where client_name=?");
+        return jdbcUserDetailsManager;
     }
 
     @Bean

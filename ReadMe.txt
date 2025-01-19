@@ -128,4 +128,6 @@ package 9thApp - project : continue to learn spring 'Security'
 - added hiding links
 - added database connection
 - added new method of using user data from database
+- create new tables for users and authority (client, roles)
+- use new tables + bcrypt passwords
 -
