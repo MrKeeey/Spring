@@ -130,4 +130,7 @@ package 9thApp - project : continue to learn spring 'Security'
 - added new method of using user data from database
 - create new tables for users and authority (client, roles)
 - use new tables + bcrypt passwords
+
+package 10thApp - project : learn spring AOP
+- create new project
 -
