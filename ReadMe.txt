@@ -133,4 +133,5 @@ package 9thApp - project : continue to learn spring 'Security'
 
 package 10thApp - project : learn spring AOP
 - create new project
--
+- some initial settings (added dependency + new console method)
+- 
