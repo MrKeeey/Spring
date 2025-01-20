@@ -1,5 +1,6 @@
 package com.hstn.aop;
 
+import com.hstn.aop.dao.UserDataDAO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +15,13 @@ public class AopApplication {
 	}
 
 	@Bean
-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+	public CommandLineRunner commandLineRunner(UserDataDAO userDataDAO) {
 		return runner -> {
-			System.out.println("Hello AOP Spring!!!");
+			demoTheBeforeAdvice(userDataDAO);
 		};
+	}
+
+	private void demoTheBeforeAdvice(UserDataDAO userDataDAO) {
+		userDataDAO.addUserdata();
 	}
 }
