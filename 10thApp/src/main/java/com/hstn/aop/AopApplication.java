@@ -22,6 +22,6 @@ public class AopApplication {
 	}
 
 	private void demoTheBeforeAdvice(UserDataDAO userDataDAO) {
-		userDataDAO.addUserdata();
+		userDataDAO.addUserData();
 	}
 }

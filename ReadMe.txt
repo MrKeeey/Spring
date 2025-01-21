@@ -135,4 +135,5 @@ package 10thApp - project : learn spring AOP
 - create new project
 - some initial settings (added dependency + new console method)
 - added interface UserDataDAO + class UserDataImpl
+- added new class Aspect + Advice Before
 -
