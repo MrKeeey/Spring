@@ -5,7 +5,6 @@ import com.hstn.aop.dao.UserDataDAO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -24,6 +23,6 @@ public class AopApplication {
 
 	private void demoTheBeforeAdvice(UserDataDAO userDataDAO, AdminDAO adminDAO) {
 		userDataDAO.addUserData();
-		adminDAO.addUserData();
+		adminDAO.addAdmin();
 	}
 }
