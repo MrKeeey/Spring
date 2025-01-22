@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MYLoggingAspect {
 
-    @Before("execution( public void addUserData() )")
+    @Before("execution( public void com.hstn.aop.dao.UserDataDAO.addUserData() )")
     public void beforeAddUserData(JoinPoint joinPoint) {
         System.out.println("11111111111111111111111\nBefore addUserData");
     }

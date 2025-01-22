@@ -137,4 +137,4 @@ package 10thApp - project : learn spring AOP
 - added interface UserDataDAO + class UserDataImpl
 - added new class Aspect + Advice Before
 - check how work aspect with 2 identical methods
--
+- @before for 1 method with full class name
