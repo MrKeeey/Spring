@@ -25,6 +25,6 @@ public class AopApplication {
 		userDataDAO.addUserData();
 		Admin admin = new Admin();
 		int number = 8;
-		adminDAO.addAdmin(admin, number, true);
+		adminDAO.addAdmin();
 	}
 }
