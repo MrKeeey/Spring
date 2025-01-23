@@ -23,6 +23,8 @@ public class AopApplication {
 
 	private void demoTheBeforeAdvice(UserDataDAO userDataDAO, AdminDAO adminDAO) {
 		userDataDAO.addUserData();
-		adminDAO.addAdmin();
+		Admin admin = new Admin();
+		int number = 8;
+		adminDAO.addAdmin(admin, number, true);
 	}
 }

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class MYLoggingAspect {
 
-    @Before("execution( public int add*() )")
-    public void beforeAddUserData(JoinPoint joinPoint) {
-        System.out.println("11111111111111111111111\nBefore addUserData");
+    @Before("execution( * add*(com.hstn.aop.Admin, in*, ..) )")
+    public void beforeAddUserData() {
+        System.out.println("11111111111111111111111\nBefore");
     }
 }

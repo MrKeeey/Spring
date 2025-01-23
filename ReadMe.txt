@@ -139,4 +139,5 @@ package 10thApp - project : learn spring AOP
 - check how work aspect with 2 identical methods
 - @before for 1 method with full class name
 - checked how work pointcut expression with *
+- continue learning pointcut expression
 -
