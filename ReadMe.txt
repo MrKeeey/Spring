@@ -141,4 +141,5 @@ package 10thApp - project : learn spring AOP
 - checked how work pointcut expression with *
 - continue learning pointcut expression
 - added @Pointcut method
+- trying @Pointcut combination
 -

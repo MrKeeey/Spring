@@ -10,17 +10,33 @@ import org.springframework.stereotype.Component;
 @Component
 public class MYLoggingAspect {
 
-    @Pointcut("execution( * add*() )")
+    @Pointcut("execution( * com.hstn.aop.dao.*.*(..) )")
     private void pointcutForMethods() {
     }
 
-    @Before("pointcutForMethods()")
-    public void beforeAddUserData() {
-        System.out.println("11111111111111111111111\nBefore");
+    @Pointcut("execution( * com.hstn.aop.dao.*.get*(..) )")
+    private void pointcutForGetters() {
     }
 
-    @Before("pointcutForMethods()")
-    public void beforeAdmin() {
-        System.out.println("333333333333333333333333\nBefore");
+    @Pointcut("execution( * com.hstn.aop.dao.*.set*(..) )")
+    private void pointcutForSetters() {
     }
+
+    @Pointcut("pointcutForSetters() || pointcutForGetters()")
+    private void pointcutForSettersAndGetters() {
+    }
+
+    @Pointcut("pointcutForMethods() && !(pointcutForSetters() || pointcutForGetters())")
+    private void pointcutNotForSettersAndGetters() {
+    }
+
+    @Before("pointcutNotForSettersAndGetters()")
+    public void beforeAddUserData() {
+        System.out.println("    1 Before");
+    }
+
+//    @Before("pointcutForMethods()")
+//    public void beforeAdmin() {
+//        System.out.println("    3 Before");
+//    }
 }

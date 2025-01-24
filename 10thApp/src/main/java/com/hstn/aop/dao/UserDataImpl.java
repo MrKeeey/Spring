@@ -7,7 +7,6 @@ public class UserDataImpl implements UserDataDAO {
 
     @Override
     public void addUserData() {
-        System.out.println("22222222222222222222222");
-        System.out.println(getClass() + ": add user data");
+        System.out.println(getClass() + ": add user data from USER");
     }
 }
