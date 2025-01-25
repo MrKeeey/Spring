@@ -7,12 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(10)
-public class MYLoggingAspect {
+@Order(30)
+public class Admin {
 
     @Before("MyPointcutExpression.pointcutForMethods()")
-    public void beforeAddUserData() {
-        System.out.println("    1 Before");
+    public void beforeAdmin() {
+        System.out.println("    3 Before");
     }
-
 }

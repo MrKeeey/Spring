@@ -142,4 +142,5 @@ package 10thApp - project : learn spring AOP
 - continue learning pointcut expression
 - added @Pointcut method
 - trying @Pointcut combination
+- added @Pointcut order (new classes for pointcut)
 -
