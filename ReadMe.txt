@@ -143,4 +143,5 @@ package 10thApp - project : learn spring AOP
 - added @Pointcut method
 - trying @Pointcut combination
 - added @Pointcut order (new classes for pointcut)
+- added JoinPoint
 -
