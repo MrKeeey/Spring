@@ -2,6 +2,8 @@ package com.hstn.aop.dao;
 
 import com.hstn.aop.Admin;
 
+import java.util.List;
+
 public interface AdminDAO {
 
     void addAdmin();
@@ -14,4 +16,5 @@ public interface AdminDAO {
 
     void setPassword(String password);
 
+    List<Admin> findAdmins();
 }

@@ -6,9 +6,9 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class MyPointcutExpression {
 
-    @Pointcut("execution( * com.hstn.aop.dao.*.*(..) )")
-    public void pointcutForMethods() {
-    }
+//    @Pointcut("execution( * com.hstn.aop.dao.*.*(..) )")
+//    public void pointcutForMethods() {
+//    }
 
     @Pointcut("execution( * com.hstn.aop.dao.*.get*(..) )")
     public void pointcutForGetters() {
