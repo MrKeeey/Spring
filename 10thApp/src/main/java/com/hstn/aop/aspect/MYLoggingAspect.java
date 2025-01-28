@@ -22,6 +22,17 @@ public class MYLoggingAspect {
         String methodName = joinPoint.getSignature().toShortString();
         System.out.println("    = " + methodName);
         System.out.println("    result" + result);
+
+        changeResult(result);
+    }
+
+    private void changeResult(List<Admin> result) {
+        for (Admin admin : result) {
+            admin.setName(admin.getName().toUpperCase());
+            if (admin.getName().equals("BORIS")) {
+                admin.setName("HACKER");
+            }
+        }
     }
 
     @Before("MyPointcutExpression.pointcutForMethods()")
