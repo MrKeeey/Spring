@@ -39,16 +39,14 @@ public class AdminImpl implements AdminDAO {
 
     @Override
     public List<Admin> findAdmins() {
+
         List<Admin> admins = new ArrayList<>();
-        Admin admin1 = new Admin("Anna", 18);
-        Admin admin2 = new Admin("Boris", 25);
-        Admin admin3 = new Admin("Victor", 30);
+        admins.add(new Admin("Anna", 18));
+        admins.add(new Admin("Boris", 25));
+        admins.add(new Admin("Victor", 30));
 
-//        admins.add(admin1);
-//        admins.add(admin2);
-//        admins.add(admin3);
-
-        admins = List.of(admin1, admin2, admin3);
+//        admins = List.of(admin1, admin2, admin3);
+        System.out.println("    End of findAdmins method");
 
         return admins;
     }

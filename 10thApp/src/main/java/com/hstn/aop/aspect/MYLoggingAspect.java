@@ -1,6 +1,8 @@
 package com.hstn.aop.aspect;
 
+import com.hstn.aop.Admin;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -8,11 +10,19 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Aspect
 @Component
 @Order(10)
 public class MYLoggingAspect {
+
+    @AfterReturning(pointcut = "execution(* find*(..))", returning = "result")
+    public void afterReturning(JoinPoint joinPoint, List<Admin> result) {
+        String methodName = joinPoint.getSignature().toShortString();
+        System.out.println("    = " + methodName);
+        System.out.println("    result" + result);
+    }
 
     @Before("MyPointcutExpression.pointcutForMethods()")
     public void beforeAddUserData(JoinPoint joinPoint) {

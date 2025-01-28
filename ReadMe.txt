@@ -145,4 +145,5 @@ package 10thApp - project : learn spring AOP
 - added @Pointcut order (new classes for pointcut)
 - added JoinPoint
 - starting learning Advice @AfterReturning
+- added method with @AfterReturning
 -
