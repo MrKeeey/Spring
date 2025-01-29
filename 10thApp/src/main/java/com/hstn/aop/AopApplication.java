@@ -12,33 +12,46 @@ import java.util.List;
 @SpringBootApplication
 public class AopApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AopApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AopApplication.class, args);
+    }
 
-	@Bean
-	public CommandLineRunner commandLineRunner(UserDataDAO userDataDAO, AdminDAO adminDAO) {
-		return runner -> {
+    @Bean
+    public CommandLineRunner commandLineRunner(UserDataDAO userDataDAO, AdminDAO adminDAO) {
+        return runner -> {
 //			demoTheBeforeAdvice(userDataDAO, adminDAO);
-			runAfterReturnAdvice(adminDAO);
-		};
-	}
+//			runAfterReturnAdvice(adminDAO);
+            runAfterThrowingAdvice(adminDAO);
+        };
+    }
 
-	private void runAfterReturnAdvice(AdminDAO adminDAO) {
-		List<Admin> admins = adminDAO.findAdmins();
-		for (Admin admin : admins) {
-			System.out.println(admin);
-		}
-	}
+    private void runAfterThrowingAdvice(AdminDAO adminDAO) {
+        List<Admin> admins = null;
 
-	private void demoTheBeforeAdvice(UserDataDAO userDataDAO, AdminDAO adminDAO) {
-		userDataDAO.addUserData();
+        try {
+            boolean flag = true;
+            admins = adminDAO.findAdmins(flag);
 
-		adminDAO.addAdmin();
+        } catch (Exception e) {
+            System.out.println("Exception in main: " + e.getMessage());
+        }
+    }
 
-		adminDAO.setName("Anna");
-		adminDAO.setPassword("12345678");
-		String name = adminDAO.getName();
-		String password = adminDAO.getPassword();
-	}
+    private void runAfterReturnAdvice(AdminDAO adminDAO) {
+        List<Admin> admins = adminDAO.findAdmins();
+        for (Admin admin : admins) {
+            System.out.println(admin);
+        }
+    }
+
+    private void demoTheBeforeAdvice(UserDataDAO userDataDAO, AdminDAO adminDAO) {
+        userDataDAO.addUserData();
+
+        adminDAO.addAdmin();
+
+        adminDAO.setName("Anna");
+        adminDAO.setPassword("12345678");
+        String name = adminDAO.getName();
+        String password = adminDAO.getPassword();
+    }
 }

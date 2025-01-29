@@ -17,4 +17,5 @@ public interface AdminDAO {
     void setPassword(String password);
 
     List<Admin> findAdmins();
+    List<Admin> findAdmins(Boolean flag);
 }
