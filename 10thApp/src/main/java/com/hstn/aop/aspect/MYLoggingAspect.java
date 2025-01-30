@@ -2,10 +2,7 @@ package com.hstn.aop.aspect;
 
 import com.hstn.aop.Admin;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -18,6 +15,12 @@ import java.util.List;
 @Order(10)
 public class MYLoggingAspect {
 
+    @After("execution(* find*(..))")
+    public void afterAdvice(JoinPoint joinPoint) {
+        String method = joinPoint.getSignature().getName();
+        System.out.println("    After = " + method);
+    }
+
     @AfterThrowing(pointcut = "execution(* find*(..))",
             throwing = "exception")
     public void afterThrowing(JoinPoint joinPoint, Throwable exception) {
@@ -29,7 +32,7 @@ public class MYLoggingAspect {
     @AfterReturning(pointcut = "execution(* find*(..))",
             returning = "result")
     public void afterReturning(JoinPoint joinPoint, List<Admin> result) {
-        String methodName = joinPoint.getSignature().toShortString();
+        String methodName = joinPoint.getSignature().getName();
         System.out.println("    methodName = " + methodName);
         System.out.println("    result" + result);
 

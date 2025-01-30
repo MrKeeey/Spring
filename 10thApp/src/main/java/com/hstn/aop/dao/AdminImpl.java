@@ -58,8 +58,6 @@ public class AdminImpl implements AdminDAO {
             throw new RuntimeException("Exception in findAdmins");
         }
 
-        System.out.println("111111111111111111111111111111111");
-
         List<Admin> admins = new ArrayList<>();
         admins.add(new Admin("Anna", 18));
         admins.add(new Admin("Boris", 25));

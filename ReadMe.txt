@@ -147,5 +147,6 @@ package 10thApp - project : learn spring AOP
 - starting learning Advice @AfterReturning
 - added method with @AfterReturning
 - use method with @AfterReturning for change data
-- added method with @AfterThrowing + check how it's work
+- added method with @AfterThrowing + check how it works
+- added method with @After + check how it works
 -

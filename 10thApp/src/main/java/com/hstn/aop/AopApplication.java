@@ -21,8 +21,22 @@ public class AopApplication {
         return runner -> {
 //			demoTheBeforeAdvice(userDataDAO, adminDAO);
 //			runAfterReturnAdvice(adminDAO);
-            runAfterThrowingAdvice(adminDAO);
+//            runAfterThrowingAdvice(adminDAO);
+            runAfterAdvice(adminDAO);
         };
+    }
+
+    private void runAfterAdvice(AdminDAO adminDAO) {
+        List<Admin> admins = null;
+
+        try {
+            boolean flag = false;
+            admins = adminDAO.findAdmins(flag);
+
+        } catch (Exception e) {
+            System.out.println("Exception in main: " + e.getMessage());
+        }
+        System.out.println("No exception in main");
     }
 
     private void runAfterThrowingAdvice(AdminDAO adminDAO) {
