@@ -2,6 +2,7 @@ package com.hstn.aop.aspect;
 
 import com.hstn.aop.Admin;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
@@ -14,6 +15,20 @@ import java.util.List;
 @Component
 @Order(10)
 public class MYLoggingAspect {
+
+    @Around("execution(* getCr*(..))")
+    public Object aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
+        String method = joinPoint.getSignature().getName();
+        System.out.println("    Around = " + method);
+        long startTime = System.currentTimeMillis();
+
+        Object result = joinPoint.proceed();
+
+        long duration = System.currentTimeMillis() - startTime;
+        System.out.println("    Around duration: " + duration);
+
+        return result;
+    }
 
     @After("execution(* find*(..))")
     public void afterAdvice(JoinPoint joinPoint) {
