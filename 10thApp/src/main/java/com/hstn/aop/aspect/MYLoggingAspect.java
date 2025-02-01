@@ -22,7 +22,13 @@ public class MYLoggingAspect {
         System.out.println("    Around = " + method);
         long startTime = System.currentTimeMillis();
 
-        Object result = joinPoint.proceed();
+        Object result = null;
+        try {
+            result = joinPoint.proceed();
+        } catch (Throwable e) {
+            System.out.println("    " + e.getMessage());
+            result = "  Exception. Default value refuse credit.";
+        }
 
         long duration = System.currentTimeMillis() - startTime;
         System.out.println("    Around duration: " + duration);
